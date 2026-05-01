@@ -5,6 +5,7 @@ from urllib.parse import urljoin
 
 import requests
 from bs4 import BeautifulSoup
+from dateutil import parser as dateutil_parser
 
 from core.collector.base import BaseSource
 from core.collector.web_scraper import WebScraper
@@ -56,6 +57,8 @@ class CompanyWebsiteSource(BaseSource):
             href = link_el.get("href", "")
             if href and not href.startswith("http"):
                 href = urljoin(cfg.url, href)
+            date_el = article.select_one("time, .date, [class*='date'], [class*='time']")
+            published_at = self._parse_date(date_el)
             content = self._scraper.fetch_url(href) if href else ""
             items.append(RawNewsItem(
                 title=title,
@@ -64,6 +67,19 @@ class CompanyWebsiteSource(BaseSource):
                 source_name=f"{company.name}官网",
                 source_type="website",
                 company_name=company.name,
-                published_at=None,
+                published_at=published_at,
             ))
         return items
+
+    def _parse_date(self, el) -> Optional[datetime]:
+        if not el:
+            return None
+        # <time datetime="2026-04-24"> or ISO strings
+        dt_attr = el.get("datetime", "")
+        text = dt_attr or el.get_text(strip=True)
+        if not text:
+            return None
+        try:
+            return dateutil_parser.parse(text, fuzzy=True)
+        except Exception:
+            return None

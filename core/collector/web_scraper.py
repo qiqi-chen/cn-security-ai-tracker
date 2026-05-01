@@ -19,6 +19,7 @@ class WebScraper:
         try:
             resp = self._session.get(url, timeout=self._timeout)
             resp.raise_for_status()
+            resp.encoding = resp.apparent_encoding or resp.encoding
             return self._extract_text(resp.text)
         except Exception as e:
             logger.warning("web_scraper_error", url=url, error=str(e))
