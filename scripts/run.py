@@ -165,8 +165,13 @@ def _build_sources(cfg, companies=None):
     if cfg.get("sources.company_website.enabled", True):
         website_configs = {}
         for company in (companies or []):
-            if company.news_url:
-                website_configs[company.name] = WebsiteConfig(url=company.news_url)
+            if company.news_url and company.news_article_selector:
+                website_configs[company.name] = WebsiteConfig(
+                    url=company.news_url,
+                    article_selector=company.news_article_selector,
+                    title_selector=company.news_title_selector,
+                    link_selector=company.news_link_selector,
+                )
         sources.append(CompanyWebsiteSource(configs=website_configs))
     if cfg.get("sources.playwright.enabled", False):
         sources.append(PlaywrightSource())

@@ -20,6 +20,9 @@ class CompanyManager:
                 partner=c.get("partner", ""),
                 website=c.get("website", ""),
                 news_url=c.get("news_url", ""),
+                news_article_selector=c.get("news_article_selector", ""),
+                news_title_selector=c.get("news_title_selector", "h2"),
+                news_link_selector=c.get("news_link_selector", "a"),
             )
             for c in data.get("companies", [])
         ]

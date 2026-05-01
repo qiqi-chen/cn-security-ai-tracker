@@ -62,7 +62,10 @@ companies:
     product: 山石智源
     partner: ""
     website: https://www.hillstonenet.com.cn
-    news_url: ""
+    news_url: https://www.hillstonenet.com.cn/news/
+    news_article_selector: "article"
+    news_title_selector: "h2"
+    news_link_selector: "a"
 
   - name: 深信服
     english_name: Sangfor
@@ -352,7 +355,10 @@ companies:
     product: 长亭雷池WAF
     partner: ""
     website: https://www.chaitin.cn
-    news_url: ""
+    news_url: https://www.chaitin.cn/news
+    news_article_selector: ".news-item"
+    news_title_selector: "h3"
+    news_link_selector: "a"
 
   - name: 青藤云安全
     english_name: Qingteng Cloud

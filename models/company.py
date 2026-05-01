@@ -10,6 +10,9 @@ class Company:
     partner: str = ""
     website: str = ""
     news_url: str = ""
+    news_article_selector: str = ""
+    news_title_selector: str = "h2"
+    news_link_selector: str = "a"
     news_count: int = 0
 
     def all_names(self) -> List[str]:
