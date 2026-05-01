@@ -5,28 +5,25 @@ collector:
   retry_delay: 2.0
   proxy: ""
   user_agent: "Mozilla/5.0 (compatible; cn-security-ai-tracker/0.1)"
+  time_range: month
 
 sources:
   rss:
     enabled: true
     feeds:
-      - name: 奇安信官网
-        url: https://www.qianxin.com/news/rss
-      - name: 360安全
-        url: https://www.360.cn/rss.xml
-      - name: 绿盟科技
-        url: https://www.nsfocus.com.cn/rss
-      - name: 安恒信息
-        url: https://www.dbappsecurity.com.cn/rss
-  searxng:
-    enabled: true
-    url: http://localhost:8080
-    max_results: 10
-    engines:
-      - google
-      - bing
-      - baidu
-  website:
+      - name: 安全客
+        url: https://api.anquanke.com/data/v1/rss
+        scrape_full_content: false
+      - name: 嘶吼
+        url: https://www.4hou.com/feed
+        scrape_full_content: false
+      - name: 安全脉搏
+        url: https://www.secpulse.com/feed
+        scrape_full_content: false
+      - name: 绿盟科技博客
+        url: https://blog.nsfocus.net/feed/
+        scrape_full_content: false
+  company_website:
     enabled: true
     timeout: 20
   playwright:
@@ -35,65 +32,46 @@ sources:
     timeout: 30
 
 processor:
-  min_content_length: 100
-  dedup_threshold: 0.85
-  quality:
-    min_score: 0.3
-    keyword_weight: 0.4
-    length_weight: 0.3
-    freshness_weight: 0.3
+  min_content_length: 50
+  min_quality_score: 0.3
+  dedup_db_path: data/cache/news_cache.db
+  dedup_retention_days: 90
 
 enhancer:
-  enabled: true
-  provider: deepseek
+  enabled: false
   model: deepseek-chat
-  api_base: https://api.deepseek.com/v1
-  max_tokens: 2048
+  base_url: https://api.deepseek.com
+  max_tokens: 300
   temperature: 0.3
-  batch_size: 5
-  summary_prompt: "请对以下安全新闻进行简要摘要，提取关键信息，不超过150字："
-  keypoints_prompt: "请从以下安全新闻中提取3-5个关键要点，以列表形式输出："
+  concurrency: 5
+  cache_db_path: data/cache/llm_cache.db
 
 analyzer:
+  trend_window_days: 7
+  trend_threshold: 0.5
   top_keywords_count: 20
-  co_mention_min_count: 2
-  surge_threshold: 2.0
-  lookback_days: 7
 
 reporter:
-  template_dir: templates
-  default_template: report_template.md.j2
-  include_raw_news: false
-  max_news_per_company: 10
+  max_news_per_company: 5
+  sort_by: quality
+  include_empty_companies: false
 
 exporter:
   targets:
     - markdown
-  output_dir: output
-  markdown:
-    enabled: true
-    filename_pattern: "report_{date}.md"
+  output_dir: output/
   feishu:
     enabled: false
-    webhook_url: ""
-    secret: ""
+    cli_bin: feishu
+    folder_token: ""
+    notify_webhook: ""
   dingtalk:
     enabled: false
-    webhook_url: ""
-    secret: ""
-
-schedule:
-  enabled: false
-  cron: "0 8 * * 1-5"
-  timezone: Asia/Shanghai
-  lookback_hours: 24
+    cli_bin: dingtalk
+    notify_webhook: ""
+    doc_space_id: ""
 
 logging:
   level: INFO
   format: json
   file: ""
-
-cache:
-  dir: data/cache
-  ttl_hours: 24
-  max_size_mb: 500

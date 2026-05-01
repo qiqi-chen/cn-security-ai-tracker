@@ -7,7 +7,8 @@ companies:
       - Qi An Xin
     product: 奇安信天擎
     partner: ""
-    website: ""
+    website: https://www.qianxin.com
+    news_url: ""
 
   - name: 360安全
     english_name: 360 Security
@@ -15,9 +16,13 @@ companies:
       - 三六零
       - 360集团
       - 360安全科技
+      - 奇虎360
+      - 奇虎
+      - Qihoo
     product: 360安全卫士
     partner: ""
-    website: ""
+    website: https://www.360.cn
+    news_url: ""
 
   - name: 启明星辰
     english_name: Venustech
@@ -26,7 +31,8 @@ companies:
       - Venus Tech
     product: 天镜漏洞扫描
     partner: ""
-    website: ""
+    website: https://www.venustech.com.cn
+    news_url: ""
 
   - name: 绿盟科技
     english_name: NSFOCUS
@@ -35,7 +41,8 @@ companies:
       - NS Focus
     product: 绿盟UTS
     partner: ""
-    website: ""
+    website: https://www.nsfocus.com.cn
+    news_url: ""
 
   - name: 天融信
     english_name: TopsecNetwork
@@ -44,7 +51,8 @@ companies:
       - Topsec
     product: 天融信防火墙
     partner: ""
-    website: ""
+    website: https://www.topsec.com.cn
+    news_url: ""
 
   - name: 山石网科
     english_name: Hillstone Networks
@@ -53,7 +61,8 @@ companies:
       - Hillstone
     product: 山石智源
     partner: ""
-    website: ""
+    website: https://www.hillstonenet.com.cn
+    news_url: ""
 
   - name: 深信服
     english_name: Sangfor
@@ -62,7 +71,8 @@ companies:
       - Sangfor Technologies
     product: 深信服EDR
     partner: ""
-    website: ""
+    website: https://www.sangfor.com.cn
+    news_url: ""
 
   - name: 安恒信息
     english_name: DBAPPSecurity
@@ -71,7 +81,8 @@ companies:
       - DBAPP Security
     product: 安恒明御
     partner: ""
-    website: ""
+    website: https://www.dbappsecurity.com.cn
+    news_url: ""
 
   - name: 亚信安全
     english_name: TrendMicro China
@@ -80,7 +91,8 @@ companies:
       - iSIGHT
     product: 亚信安全云网关
     partner: ""
-    website: ""
+    website: https://www.asiainfo-sec.com
+    news_url: ""
 
   - name: 卫士通
     english_name: WESTONE
@@ -89,7 +101,8 @@ companies:
       - Westone Information
     product: 卫士通密码设备
     partner: ""
-    website: ""
+    website: https://www.westone.com.cn
+    news_url: ""
 
   - name: 华为安全
     english_name: Huawei Security
@@ -99,7 +112,8 @@ companies:
       - 华为技术
     product: 华为HiSec
     partner: ""
-    website: ""
+    website: https://www.huawei.com/cn
+    news_url: ""
 
   - name: 阿里云安全
     english_name: Alibaba Cloud Security
@@ -109,7 +123,8 @@ companies:
       - Alibaba Cloud
     product: 阿里云盾
     partner: ""
-    website: ""
+    website: https://security.aliyun.com
+    news_url: ""
 
   - name: 腾讯安全
     english_name: Tencent Security
@@ -119,7 +134,8 @@ companies:
       - 腾讯云安全
     product: 腾讯零信任
     partner: ""
-    website: ""
+    website: https://s.tencent.com
+    news_url: ""
 
   - name: 百度安全
     english_name: Baidu Security
@@ -129,7 +145,8 @@ companies:
       - 百度云安全
     product: 百度AI安全
     partner: ""
-    website: ""
+    website: https://anquan.baidu.com
+    news_url: ""
 
   - name: 京东云安全
     english_name: JD Cloud Security
@@ -139,7 +156,8 @@ companies:
       - JD Cloud
     product: 京东云盾
     partner: ""
-    website: ""
+    website: https://www.jdcloud.com
+    news_url: ""
 
   - name: 金山云安全
     english_name: Kingsoft Cloud Security
@@ -148,7 +166,8 @@ companies:
       - Kingsoft Cloud
     product: 金山云安全能力
     partner: ""
-    website: ""
+    website: https://www.ksyun.com
+    news_url: ""
 
   - name: 网易云安全
     english_name: NetEase Cloud Security
@@ -158,7 +177,8 @@ companies:
       - NetEase Cloud
     product: 网易易盾
     partner: ""
-    website: ""
+    website: https://dun.163.com
+    news_url: ""
 
   - name: 安全宝
     english_name: Anquanbao
@@ -167,6 +187,7 @@ companies:
     product: 安全宝WAF
     partner: ""
     website: ""
+    news_url: ""
 
   - name: 东软网络安全
     english_name: Neusoft Security
@@ -176,7 +197,8 @@ companies:
       - Neusoft
     product: 东软NetEye
     partner: ""
-    website: ""
+    website: https://www.neusoft.com
+    news_url: ""
 
   - name: 知道创宇
     english_name: Knownsec
@@ -185,7 +207,8 @@ companies:
       - KnownSec
     product: 知道创宇404实验室
     partner: ""
-    website: ""
+    website: https://www.knownsec.com
+    news_url: ""
 
   - name: 中新网安
     english_name: Sinocloud Security
@@ -194,6 +217,7 @@ companies:
     product: ""
     partner: ""
     website: ""
+    news_url: ""
 
   - name: 安天科技
     english_name: Antiy
@@ -202,7 +226,8 @@ companies:
       - Antiy Labs
     product: 安天智甲
     partner: ""
-    website: ""
+    website: https://www.antiy.cn
+    news_url: ""
 
   - name: 威努特
     english_name: Winicssec
@@ -211,7 +236,8 @@ companies:
       - Winics
     product: 威努特工控安全
     partner: ""
-    website: ""
+    website: https://www.winicssec.com
+    news_url: ""
 
   - name: 迪普科技
     english_name: DPtech
@@ -220,7 +246,8 @@ companies:
       - DP Technology
     product: 迪普防火墙
     partner: ""
-    website: ""
+    website: https://www.dptech.com.cn
+    news_url: ""
 
   - name: 新华三安全
     english_name: H3C Security
@@ -230,7 +257,8 @@ companies:
       - 紫光华三
     product: H3C SecPath
     partner: ""
-    website: ""
+    website: https://www.h3c.com
+    news_url: ""
 
   - name: 长扬科技
     english_name: Cyberpeace
@@ -239,7 +267,8 @@ companies:
       - CyberPeace Technology
     product: 长扬工控安全
     partner: ""
-    website: ""
+    website: https://www.cyberpeace.cn
+    news_url: ""
 
   - name: 匡恩网络
     english_name: Kuangan Network
@@ -248,6 +277,7 @@ companies:
     product: 匡恩工控安全检测
     partner: ""
     website: ""
+    news_url: ""
 
   - name: 谷神星
     english_name: Gushenshen
@@ -256,6 +286,7 @@ companies:
     product: ""
     partner: ""
     website: ""
+    news_url: ""
 
   - name: 数字观星
     english_name: Digital Stargazing
@@ -264,6 +295,7 @@ companies:
     product: ""
     partner: ""
     website: ""
+    news_url: ""
 
   - name: 天际友盟
     english_name: Tianji Youmeng
@@ -272,6 +304,7 @@ companies:
     product: ""
     partner: ""
     website: ""
+    news_url: ""
 
   - name: 安信天行
     english_name: Anxin Tianxing
@@ -280,6 +313,7 @@ companies:
     product: ""
     partner: ""
     website: ""
+    news_url: ""
 
   - name: 赛博英杰
     english_name: CyberHero
@@ -288,16 +322,7 @@ companies:
     product: ""
     partner: ""
     website: ""
-
-  - name: 奇虎360
-    english_name: Qihoo 360
-    aliases:
-      - 奇虎
-      - 360
-      - Qihoo
-    product: 360安全大脑
-    partner: ""
-    website: ""
+    news_url: ""
 
   - name: 数篷科技
     english_name: DataCloak
@@ -306,4 +331,5 @@ companies:
       - DataCloak Technology
     product: 数篷零信任
     partner: ""
-    website: ""
+    website: https://www.datacloak.com.cn
+    news_url: ""

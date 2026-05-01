@@ -12,8 +12,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from core.config.config_manager import ConfigManager
 from core.config.company_manager import CompanyManager
 from core.collector.rss_source import RSSSource
-from core.collector.searxng_source import SearxngSource
-from core.collector.company_website import CompanyWebsiteSource
+from core.collector.company_website import CompanyWebsiteSource, WebsiteConfig
 from core.collector.playwright_source import PlaywrightSource
 from core.collector.aggregator import Aggregator
 from core.processor.cleaner import Cleaner
@@ -61,7 +60,7 @@ def run(params: dict | None = None) -> dict:
     period_end = datetime.now()
     period_start = period_end - timedelta(days=days)
 
-    sources = _build_sources(cfg)
+    sources = _build_sources(cfg, companies)
     aggregator = Aggregator(sources, concurrency=cfg.get("collector.concurrency", 8))
 
     logger.info("collection_start", companies=len(companies), time_range=time_range)
@@ -158,19 +157,17 @@ def run(params: dict | None = None) -> dict:
     }
 
 
-def _build_sources(cfg):
+def _build_sources(cfg, companies=None):
     sources = []
     if cfg.get("sources.rss.enabled", True):
         feeds = cfg.get("sources.rss.feeds", [])
         sources.append(RSSSource(feeds=feeds, timeout=cfg.get("collector.timeout", 10)))
-    if cfg.get("sources.searxng.enabled", True):
-        sources.append(SearxngSource(
-            base_url=cfg.get("sources.searxng.url", "http://localhost:8080"),
-            search_limit=cfg.get("sources.searxng.search_limit", 10),
-            timeout=cfg.get("collector.timeout", 10),
-        ))
     if cfg.get("sources.company_website.enabled", True):
-        sources.append(CompanyWebsiteSource(configs={}))
+        website_configs = {}
+        for company in (companies or []):
+            if company.news_url:
+                website_configs[company.name] = WebsiteConfig(url=company.news_url)
+        sources.append(CompanyWebsiteSource(configs=website_configs))
     if cfg.get("sources.playwright.enabled", False):
         sources.append(PlaywrightSource())
     return sources

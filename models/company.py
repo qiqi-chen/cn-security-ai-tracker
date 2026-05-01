@@ -9,6 +9,7 @@ class Company:
     product: str = ""
     partner: str = ""
     website: str = ""
+    news_url: str = ""
     news_count: int = 0
 
     def all_names(self) -> List[str]:

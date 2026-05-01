@@ -19,6 +19,7 @@ class CompanyManager:
                 product=c.get("product", ""),
                 partner=c.get("partner", ""),
                 website=c.get("website", ""),
+                news_url=c.get("news_url", ""),
             )
             for c in data.get("companies", [])
         ]

@@ -69,9 +69,7 @@ class RSSSource(BaseSource):
         return items
 
     def _is_relevant(self, text: str, company: Company) -> bool:
-        has_company = any(n.lower() in text.lower() for n in company.all_names())
-        has_ai = any(kw.lower() in text.lower() for kw in AI_KEYWORDS)
-        return has_company and has_ai
+        return any(n.lower() in text.lower() for n in company.all_names())
 
     def _parse_date(self, entry) -> Optional[datetime]:
         for attr in ("published_parsed", "updated_parsed"):
