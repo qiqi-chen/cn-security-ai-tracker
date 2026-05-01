@@ -54,3 +54,9 @@ class ProcessedNewsItem:
     @property
     def company_name(self) -> str:
         return self.raw.company_name
+
+    @property
+    def content_preview(self) -> str:
+        text = self.cleaned_content or self.raw.content
+        text = text.strip()
+        return text[:150] + "…" if len(text) > 150 else text

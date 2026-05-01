@@ -333,3 +333,104 @@ companies:
     partner: ""
     website: https://www.datacloak.com.cn
     news_url: ""
+
+  - name: 微步在线
+    english_name: ThreatBook
+    aliases:
+      - 微步
+      - ThreatBook Intelligence
+    product: 微步威胁情报
+    partner: ""
+    website: https://www.threatbook.com
+    news_url: ""
+
+  - name: 长亭科技
+    english_name: Chaitin
+    aliases:
+      - 长亭
+      - Chaitin Tech
+    product: 长亭雷池WAF
+    partner: ""
+    website: https://www.chaitin.cn
+    news_url: ""
+
+  - name: 青藤云安全
+    english_name: Qingteng Cloud
+    aliases:
+      - 青藤
+      - Qingteng
+    product: 青藤主机安全
+    partner: ""
+    website: https://www.qingteng.cn
+    news_url: ""
+
+  - name: 永信至诚
+    english_name: Yongxin Zhicheng
+    aliases:
+      - 永信
+      - Yongxin
+    product: 永信至诚靶场
+    partner: ""
+    website: https://www.yongxin-zhicheng.com
+    news_url: ""
+
+  - name: 斗象科技
+    english_name: Tophant
+    aliases:
+      - 斗象
+      - Tophant Technology
+    product: 斗象漏洞众测
+    partner: ""
+    website: https://www.tophant.com
+    news_url: ""
+
+  - name: 默安科技
+    english_name: Moresec
+    aliases:
+      - 默安
+      - Moresec Technology
+    product: 默安幻阵欺骗防御
+    partner: ""
+    website: https://www.moresec.cn
+    news_url: ""
+
+  - name: 四叶草安全
+    english_name: CloverSec
+    aliases:
+      - 四叶草
+      - CloverSecurity
+    product: 四叶草安全服务
+    partner: ""
+    website: https://www.cloversec.cn
+    news_url: ""
+
+  - name: 华顺信安
+    english_name: Huashun Xin'an
+    aliases:
+      - 华顺
+      - 网络空间测绘
+    product: 华顺信安空间测绘
+    partner: ""
+    website: ""
+    news_url: ""
+
+  - name: 烽台科技
+    english_name: Fengtai Tech
+    aliases:
+      - 烽台
+      - 安赛科技
+      - AISEC
+    product: 烽台工控安全靶场
+    partner: ""
+    website: https://www.ft-inc.com.cn
+    news_url: ""
+
+  - name: 漏洞银行
+    english_name: BugBank
+    aliases:
+      - BugBank
+      - 漏洞众测
+    product: 漏洞银行众测平台
+    partner: ""
+    website: https://www.bugbank.cn
+    news_url: ""

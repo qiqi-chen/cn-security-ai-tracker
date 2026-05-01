@@ -43,6 +43,10 @@ class RSSSource(BaseSource):
         return results
 
     def _fetch_feed(self, feed_cfg: Dict, company: Company, start_date: datetime) -> List[RawNewsItem]:
+        # Company-specific feeds only run for their bound company
+        feed_company = feed_cfg.get("company")
+        if feed_company and feed_company != company.name:
+            return []
         parsed = feedparser.parse(feed_cfg["url"])
         items = []
         for entry in parsed.entries:
@@ -50,7 +54,7 @@ class RSSSource(BaseSource):
             if pub_date and pub_date < start_date:
                 continue
             text = f"{entry.get('title', '')} {entry.get('summary', '')}"
-            if not self._is_relevant(text, company):
+            if not self._is_relevant(text, company, feed_cfg):
                 continue
             content = entry.get("summary", "")
             if feed_cfg.get("scrape_full_content") and entry.get("link"):
@@ -68,8 +72,14 @@ class RSSSource(BaseSource):
             ))
         return items
 
-    def _is_relevant(self, text: str, company: Company) -> bool:
-        return any(n.lower() in text.lower() for n in company.all_names())
+    def _is_relevant(self, text: str, company: Company, feed_cfg: Dict) -> bool:
+        if feed_cfg.get("require_company", True):
+            if not any(n.lower() in text.lower() for n in company.all_names()):
+                return False
+        if feed_cfg.get("require_ai", False):
+            if not any(kw.lower() in text.lower() for kw in AI_KEYWORDS):
+                return False
+        return True
 
     def _parse_date(self, entry) -> Optional[datetime]:
         for attr in ("published_parsed", "updated_parsed"):

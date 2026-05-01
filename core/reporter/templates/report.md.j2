@@ -1,62 +1,53 @@
-# 中国网络安全厂商 AI 动态报告
-
-> 时间范围：{{ period_start }} - {{ period_end }}
-> 生成时间：{{ generated_at }}
-
----
-
-## 摘要统计
-
-| 指标 | 数值 |
-|------|------|
-| 监控厂商 | {{ total_companies_monitored }} 家 |
-| 本期新闻 | {{ total_news_collected }} 条 |
-| 活跃厂商 | {{ active_companies_count }} 家 |
-| 平均质量分 | {{ "%.2f"|format(analysis.avg_quality_score) }} |
+# 中国网络安全上市公司AI相关新闻汇总
+## 时间范围：{{ period_start }} - {{ period_end }}
 
 ---
 
 ## 行业趋势分析
 
+### 主要趋势：
 {% for trend in analysis.trends %}
-- {{ trend }}
+{{ loop.index }}. {{ trend }}
 {% endfor %}
 
----
-
-## 热点分类
-
-{% for category, count in analysis.category_stats.items() %}
-{% if count > 0 %}
+### 热点分类分布：
+{% for category, count in analysis.category_stats.items() %}{% if count > 0 %}
 - **{{ category }}**（{{ count }} 条）
-{% endif %}
-{% endfor %}
+{% endif %}{% endfor %}
 
 ---
-
-## 厂商动态详情
 
 {% for company_name, items in news_by_company.items() %}
+## {{ company_name }}{% if company_english_names[company_name] %} ({{ company_english_names[company_name] }}){% endif %}
+
 {% if items %}
-### {{ company_name }}
-
 {% for item in items %}
-- **[{{ item.title }}]({{ item.url }})**
-  来源：{{ item.source_name }} | 日期：{{ item.published_at.strftime('%Y-%m-%d') if item.published_at else '未知' }}
-  {% if item.summary %}**摘要**：{{ item.summary }}{% endif %}
-
-  {% if item.key_points %}**关键点**：
-  {% for point in item.key_points %}  - {{ point }}
-  {% endfor %}{% endif %}
+### 新闻{{ loop.index }}：{{ item.title }}
+- **发布日期**：{{ item.published_at.strftime('%Y年%m月%d日') if item.published_at else '未知' }}
+- **来源**：{{ item.source_name }}
+- **关键内容**：
+  - {{ item.summary if item.summary else item.content_preview }}
+- **原文链接**：{{ item.url }}
 
 {% endfor %}
+{% else %}
+### 暂无AI相关新闻
+- **当前状态**：暂无相关AI安全新闻
+- **备注**：该公司已纳入监测范围，有待进一步跟踪
+
 {% endif %}
+
 {% endfor %}
+---
+
+## 数据统计
+
+| 公司名称 | AI相关新闻数量 |
+|---------|--------------|
+{% for company_name, items in news_by_company.items() %}| {{ company_name }} | {{ items|length }} |
+{% endfor %}
+**总计**：{{ total_news_collected }}条AI相关新闻
 
 ---
 
-## 数据说明
-
-- 数据来源：RSS 订阅 / searxng 搜索 / 公司官网
-- 去重方式：URL + 内容哈希（SQLite 持久化）
-- AI 摘要：DeepSeek V4 Pro（deepseek-chat）
+*注：以上信息基于行业公开 RSS 订阅及公司官网整理，具体新闻详情请参考各公司官方发布渠道。生成时间：{{ generated_at }}*

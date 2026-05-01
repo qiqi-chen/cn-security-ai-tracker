@@ -11,17 +11,28 @@ sources:
   rss:
     enabled: true
     feeds:
+      # 通用安全媒体：必须同时提到公司名 + AI关键词
       - name: 安全客
         url: https://api.anquanke.com/data/v1/rss
+        require_company: true
+        require_ai: true
         scrape_full_content: false
       - name: 嘶吼
         url: https://www.4hou.com/feed
+        require_company: true
+        require_ai: true
         scrape_full_content: false
       - name: 安全脉搏
         url: https://www.secpulse.com/feed
+        require_company: true
+        require_ai: true
         scrape_full_content: false
+      # 厂商自有博客：绑定到特定公司，只需 AI 关键词
       - name: 绿盟科技博客
         url: https://blog.nsfocus.net/feed/
+        company: 绿盟科技
+        require_company: false
+        require_ai: true
         scrape_full_content: false
   company_website:
     enabled: true

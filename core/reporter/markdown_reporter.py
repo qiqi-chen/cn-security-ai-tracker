@@ -20,6 +20,7 @@ class MarkdownReporter:
 
     def generate(self, report: Report) -> str:
         news_by_company = self._group_by_company(report.news_items, report.companies)
+        company_english_names = {c.name: c.english_name for c in report.companies}
         tpl = self._env.get_template("report.md.j2")
         return tpl.render(
             period_start=report.period_start.strftime("%Y年%-m月%-d日"),
@@ -30,6 +31,7 @@ class MarkdownReporter:
             active_companies_count=report.active_companies_count,
             analysis=report.analysis,
             news_by_company=news_by_company,
+            company_english_names=company_english_names,
         )
 
     def _group_by_company(
