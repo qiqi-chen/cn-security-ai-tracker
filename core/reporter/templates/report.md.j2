@@ -1,0 +1,62 @@
+# 中国网络安全厂商 AI 动态报告
+
+> 时间范围：{{ period_start }} - {{ period_end }}
+> 生成时间：{{ generated_at }}
+
+---
+
+## 摘要统计
+
+| 指标 | 数值 |
+|------|------|
+| 监控厂商 | {{ total_companies_monitored }} 家 |
+| 本期新闻 | {{ total_news_collected }} 条 |
+| 活跃厂商 | {{ active_companies_count }} 家 |
+| 平均质量分 | {{ "%.2f"|format(analysis.avg_quality_score) }} |
+
+---
+
+## 行业趋势分析
+
+{% for trend in analysis.trends %}
+- {{ trend }}
+{% endfor %}
+
+---
+
+## 热点分类
+
+{% for category, count in analysis.category_stats.items() %}
+{% if count > 0 %}
+- **{{ category }}**（{{ count }} 条）
+{% endif %}
+{% endfor %}
+
+---
+
+## 厂商动态详情
+
+{% for company_name, items in news_by_company.items() %}
+{% if items %}
+### {{ company_name }}
+
+{% for item in items %}
+- **[{{ item.title }}]({{ item.url }})**
+  来源：{{ item.source_name }} | 日期：{{ item.published_at.strftime('%Y-%m-%d') if item.published_at else '未知' }}
+  {% if item.summary %}**摘要**：{{ item.summary }}{% endif %}
+
+  {% if item.key_points %}**关键点**：
+  {% for point in item.key_points %}  - {{ point }}
+  {% endfor %}{% endif %}
+
+{% endfor %}
+{% endif %}
+{% endfor %}
+
+---
+
+## 数据说明
+
+- 数据来源：RSS 订阅 / searxng 搜索 / 公司官网
+- 去重方式：URL + 内容哈希（SQLite 持久化）
+- AI 摘要：DeepSeek V4 Pro（deepseek-chat）

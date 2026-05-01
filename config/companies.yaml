@@ -1,0 +1,309 @@
+companies:
+  - name: 奇安信
+    english_name: QAX
+    aliases:
+      - 奇安信科技
+      - 奇安信集团
+      - Qi An Xin
+    product: 奇安信天擎
+    partner: ""
+    website: ""
+
+  - name: 360安全
+    english_name: 360 Security
+    aliases:
+      - 三六零
+      - 360集团
+      - 360安全科技
+    product: 360安全卫士
+    partner: ""
+    website: ""
+
+  - name: 启明星辰
+    english_name: Venustech
+    aliases:
+      - 启明星辰集团
+      - Venus Tech
+    product: 天镜漏洞扫描
+    partner: ""
+    website: ""
+
+  - name: 绿盟科技
+    english_name: NSFOCUS
+    aliases:
+      - 绿盟
+      - NS Focus
+    product: 绿盟UTS
+    partner: ""
+    website: ""
+
+  - name: 天融信
+    english_name: TopsecNetwork
+    aliases:
+      - 天融信科技
+      - Topsec
+    product: 天融信防火墙
+    partner: ""
+    website: ""
+
+  - name: 山石网科
+    english_name: Hillstone Networks
+    aliases:
+      - 山石网络
+      - Hillstone
+    product: 山石智源
+    partner: ""
+    website: ""
+
+  - name: 深信服
+    english_name: Sangfor
+    aliases:
+      - 深信服科技
+      - Sangfor Technologies
+    product: 深信服EDR
+    partner: ""
+    website: ""
+
+  - name: 安恒信息
+    english_name: DBAPPSecurity
+    aliases:
+      - 安恒
+      - DBAPP Security
+    product: 安恒明御
+    partner: ""
+    website: ""
+
+  - name: 亚信安全
+    english_name: TrendMicro China
+    aliases:
+      - 亚信安全科技
+      - iSIGHT
+    product: 亚信安全云网关
+    partner: ""
+    website: ""
+
+  - name: 卫士通
+    english_name: WESTONE
+    aliases:
+      - 卫士通信息产业
+      - Westone Information
+    product: 卫士通密码设备
+    partner: ""
+    website: ""
+
+  - name: 华为安全
+    english_name: Huawei Security
+    aliases:
+      - 华为
+      - Huawei
+      - 华为技术
+    product: 华为HiSec
+    partner: ""
+    website: ""
+
+  - name: 阿里云安全
+    english_name: Alibaba Cloud Security
+    aliases:
+      - 阿里安全
+      - 阿里云
+      - Alibaba Cloud
+    product: 阿里云盾
+    partner: ""
+    website: ""
+
+  - name: 腾讯安全
+    english_name: Tencent Security
+    aliases:
+      - 腾讯
+      - Tencent
+      - 腾讯云安全
+    product: 腾讯零信任
+    partner: ""
+    website: ""
+
+  - name: 百度安全
+    english_name: Baidu Security
+    aliases:
+      - 百度
+      - Baidu
+      - 百度云安全
+    product: 百度AI安全
+    partner: ""
+    website: ""
+
+  - name: 京东云安全
+    english_name: JD Cloud Security
+    aliases:
+      - 京东安全
+      - 京东云
+      - JD Cloud
+    product: 京东云盾
+    partner: ""
+    website: ""
+
+  - name: 金山云安全
+    english_name: Kingsoft Cloud Security
+    aliases:
+      - 金山云
+      - Kingsoft Cloud
+    product: 金山云安全能力
+    partner: ""
+    website: ""
+
+  - name: 网易云安全
+    english_name: NetEase Cloud Security
+    aliases:
+      - 网易安全
+      - 网易云
+      - NetEase Cloud
+    product: 网易易盾
+    partner: ""
+    website: ""
+
+  - name: 安全宝
+    english_name: Anquanbao
+    aliases:
+      - 安全宝科技
+    product: 安全宝WAF
+    partner: ""
+    website: ""
+
+  - name: 东软网络安全
+    english_name: Neusoft Security
+    aliases:
+      - 东软安全
+      - 东软集团
+      - Neusoft
+    product: 东软NetEye
+    partner: ""
+    website: ""
+
+  - name: 知道创宇
+    english_name: Knownsec
+    aliases:
+      - 知道创宇科技
+      - KnownSec
+    product: 知道创宇404实验室
+    partner: ""
+    website: ""
+
+  - name: 中新网安
+    english_name: Sinocloud Security
+    aliases:
+      - 中新网安科技
+    product: ""
+    partner: ""
+    website: ""
+
+  - name: 安天科技
+    english_name: Antiy
+    aliases:
+      - 安天
+      - Antiy Labs
+    product: 安天智甲
+    partner: ""
+    website: ""
+
+  - name: 威努特
+    english_name: Winicssec
+    aliases:
+      - 威努特技术
+      - Winics
+    product: 威努特工控安全
+    partner: ""
+    website: ""
+
+  - name: 迪普科技
+    english_name: DPtech
+    aliases:
+      - 迪普
+      - DP Technology
+    product: 迪普防火墙
+    partner: ""
+    website: ""
+
+  - name: 新华三安全
+    english_name: H3C Security
+    aliases:
+      - 新华三
+      - H3C
+      - 紫光华三
+    product: H3C SecPath
+    partner: ""
+    website: ""
+
+  - name: 长扬科技
+    english_name: Cyberpeace
+    aliases:
+      - 长扬
+      - CyberPeace Technology
+    product: 长扬工控安全
+    partner: ""
+    website: ""
+
+  - name: 匡恩网络
+    english_name: Kuangan Network
+    aliases:
+      - 匡恩
+    product: 匡恩工控安全检测
+    partner: ""
+    website: ""
+
+  - name: 谷神星
+    english_name: Gushenshen
+    aliases:
+      - 谷神星科技
+    product: ""
+    partner: ""
+    website: ""
+
+  - name: 数字观星
+    english_name: Digital Stargazing
+    aliases:
+      - 数字观星科技
+    product: ""
+    partner: ""
+    website: ""
+
+  - name: 天际友盟
+    english_name: Tianji Youmeng
+    aliases:
+      - 天际友盟科技
+    product: ""
+    partner: ""
+    website: ""
+
+  - name: 安信天行
+    english_name: Anxin Tianxing
+    aliases:
+      - 安信天行科技
+    product: ""
+    partner: ""
+    website: ""
+
+  - name: 赛博英杰
+    english_name: CyberHero
+    aliases:
+      - 赛博英杰科技
+    product: ""
+    partner: ""
+    website: ""
+
+  - name: 奇虎360
+    english_name: Qihoo 360
+    aliases:
+      - 奇虎
+      - 360
+      - Qihoo
+    product: 360安全大脑
+    partner: ""
+    website: ""
+
+  - name: 数篷科技
+    english_name: DataCloak
+    aliases:
+      - 数篷
+      - DataCloak Technology
+    product: 数篷零信任
+    partner: ""
+    website: ""

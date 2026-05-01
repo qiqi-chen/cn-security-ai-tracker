@@ -1,0 +1,47 @@
+[
+  {
+    "title": "奇安信发布新一代AI驱动安全大模型，助力企业智能防护",
+    "url": "https://www.qianxin.com/news/detail/1001",
+    "content": "奇安信今日正式发布新一代AI驱动安全大模型，该模型基于数十亿安全样本训练，能够实现对未知威胁的智能检测与响应。此次发布标志着奇安信在AI安全领域取得重大突破，将大幅提升企业网络安全防护能力。",
+    "source_name": "奇安信官网",
+    "source_type": "rss",
+    "company_name": "奇安信",
+    "published_at": "2026-04-28T09:00:00"
+  },
+  {
+    "title": "360安全大脑升级：融合LLM技术实现自动化威胁狩猎",
+    "url": "https://www.360.cn/news/detail/2001",
+    "content": "360安全大脑最新版本正式上线，全面融合大语言模型（LLM）技术，实现对复杂威胁的自动化狩猎与溯源分析。新版本在APT检测准确率上提升40%，大幅降低安全运营成本。",
+    "source_name": "360安全",
+    "source_type": "rss",
+    "company_name": "360安全",
+    "published_at": "2026-04-27T14:30:00"
+  },
+  {
+    "title": "启明星辰天镜漏洞扫描系统支持AI辅助漏洞评估",
+    "url": "https://www.venustech.com.cn/news/3001",
+    "content": "启明星辰宣布旗下天镜漏洞扫描系统新版本正式支持AI辅助漏洞评估功能，通过引入深度学习模型对漏洞危害程度进行智能评分，帮助安全团队优先处理高风险漏洞，提升安全运营效率。",
+    "source_name": "启明星辰官网",
+    "source_type": "website",
+    "company_name": "启明星辰",
+    "published_at": "2026-04-26T10:15:00"
+  },
+  {
+    "title": "绿盟科技与某头部银行达成AI安全联合创新合作",
+    "url": "https://www.nsfocus.com.cn/news/4001",
+    "content": "绿盟科技宣布与国内某头部银行签署AI安全联合创新合作协议，双方将在智能威胁检测、自动化安全响应、AI攻防对抗等领域开展深度合作，共同打造金融行业AI安全标杆解决方案。",
+    "source_name": "绿盟科技官网",
+    "source_type": "searxng",
+    "company_name": "绿盟科技",
+    "published_at": "2026-04-25T16:45:00"
+  },
+  {
+    "title": "深信服EDR新版本集成生成式AI，实现告警自动研判",
+    "url": "https://www.sangfor.com.cn/news/5001",
+    "content": "深信服发布EDR新版本，集成生成式AI能力，可对安全告警进行自动研判和报告生成，将安全分析师从重复性工作中解放出来。新版本在实际测试中将告警处理效率提升超过60%，误报率降低35%。",
+    "source_name": "深信服官网",
+    "source_type": "rss",
+    "company_name": "深信服",
+    "published_at": "2026-04-24T11:00:00"
+  }
+]

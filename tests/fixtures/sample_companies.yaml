@@ -1,0 +1,29 @@
+companies:
+  - name: 奇安信
+    english_name: QAX
+    aliases:
+      - 奇安信科技
+      - 奇安信集团
+      - Qi An Xin
+    product: 奇安信天擎
+    partner: ""
+    website: ""
+
+  - name: 360安全
+    english_name: 360 Security
+    aliases:
+      - 三六零
+      - 360集团
+      - 360安全科技
+    product: 360安全卫士
+    partner: ""
+    website: ""
+
+  - name: 启明星辰
+    english_name: Venustech
+    aliases:
+      - 启明星辰集团
+      - Venus Tech
+    product: 天镜漏洞扫描
+    partner: ""
+    website: ""
